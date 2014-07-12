@@ -1,7 +1,6 @@
-#FROM ubuntu:12.04
-FROM debian:sid
+FROM debian:wheezy
 
-MAINTAINER Olivier Berger <olivier.berger@telecom-sudparis.eu>
+MAINTAINER Will Platnick <wplatnick@gmail.com>
 
 ENV HOME /root
 RUN mkdir /build
@@ -16,7 +15,7 @@ RUN /build/prepare.sh && \
 # Setup a root password; simple enough to remember, but hard enough that
 # it won't be cracked immediately.  (ha!)
 #
-RUN echo "root:whatever123" | chpasswd
+RUN echo "root:HeyNow123!" | chpasswd
 
 ENV LC_ALL C.UTF-8
 
